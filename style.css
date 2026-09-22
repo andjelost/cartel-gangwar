@@ -2500,3 +2500,344 @@ button {
         0 0 30px rgba(167, 139, 250, 0.45),
         0 0 70px rgba(139, 92, 246, 0.15);
 }
+
+/* =========================================
+   CARTEL GANGWAR - SVETLIJI HERO + FIGURA
+========================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(139, 92, 246, 0.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(109, 40, 217, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #120b1f 0%,
+            #0d0915 50%,
+            #170d26 100%
+        );
+}
+
+/* =========================================
+   FIGURA
+========================================= */
+
+.hero-character {
+    position: absolute;
+    right: 3%;
+    bottom: -45px;
+
+    width: 480px;
+    height: 650px;
+
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* ljubičasti glow iza figure */
+
+.character-glow {
+    position: absolute;
+
+    width: 390px;
+    height: 390px;
+
+    right: 35px;
+    top: 100px;
+
+    background: rgba(139, 92, 246, 0.32);
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+}
+
+/* cela figura */
+
+.character {
+    position: absolute;
+
+    right: 90px;
+    bottom: 0;
+
+    width: 260px;
+    height: 600px;
+}
+
+/* glava */
+
+.character-head {
+    position: absolute;
+
+    top: 15px;
+    left: 82px;
+
+    width: 95px;
+    height: 115px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #34254b,
+            #100c16 70%
+        );
+
+    border-radius: 48% 48% 45% 45%;
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.18),
+        inset -15px -15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* kosa */
+
+.character-head::before {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    left: -8px;
+
+    width: 111px;
+    height: 34px;
+
+    background: #07060a;
+
+    border-radius: 55% 55% 30% 30%;
+
+    transform: rotate(-4deg);
+}
+
+/* lice / senka */
+
+.character-head::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 12px;
+    left: 25px;
+
+    width: 48px;
+    height: 25px;
+
+    background: rgba(0,0,0,.35);
+
+    border-radius: 50%;
+}
+
+/* vrat */
+
+.character-neck {
+    position: absolute;
+
+    top: 112px;
+    left: 108px;
+
+    width: 45px;
+    height: 58px;
+
+    background: #17111f;
+}
+
+/* telo */
+
+.character-body {
+    position: absolute;
+
+    top: 140px;
+    left: 42px;
+
+    width: 175px;
+    height: 260px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #09070d 0%,
+            #241735 45%,
+            #3a2455 50%,
+            #09070d 100%
+        );
+
+    clip-path: polygon(
+        25% 0,
+        75% 0,
+        100% 100%,
+        0 100%
+    );
+
+    box-shadow:
+        0 0 35px rgba(139, 92, 246, 0.15);
+}
+
+/* ramena */
+
+.character-shoulder {
+    position: absolute;
+
+    top: 5px;
+
+    width: 105px;
+    height: 62px;
+
+    background: #17111f;
+
+    border-radius: 50%;
+}
+
+.character-shoulder.left {
+    left: -48px;
+    transform: rotate(15deg);
+}
+
+.character-shoulder.right {
+    right: -48px;
+    transform: rotate(-15deg);
+}
+
+/* leva/desna ruka */
+
+.character-arm {
+    position: absolute;
+
+    top: 160px;
+
+    width: 52px;
+    height: 245px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #21172d,
+            #09070c
+        );
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 0 20px rgba(139, 92, 246, 0.08);
+}
+
+.character-arm.left {
+    left: 2px;
+    transform: rotate(10deg);
+}
+
+.character-arm.right {
+    right: 2px;
+    transform: rotate(-10deg);
+}
+
+/* noge */
+
+.character-leg {
+    position: absolute;
+
+    top: 375px;
+
+    width: 78px;
+    height: 225px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #08070c,
+            #21162f,
+            #08070c
+        );
+
+    border-radius: 25px 25px 8px 8px;
+}
+
+.character-leg.left {
+    left: 48px;
+    transform: rotate(3deg);
+}
+
+.character-leg.right {
+    right: 48px;
+    transform: rotate(-3deg);
+}
+
+/* ljubičasti obrisi */
+
+.character-body,
+.character-arm,
+.character-leg {
+    border: 1px solid rgba(167, 139, 250, 0.16);
+}
+
+/* =========================================
+   HERO TEKST ISPRED FIGURE
+========================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* malo svetliji hero */
+
+.hero-subtitle {
+    color: #c4b5fd;
+}
+
+.hero-description {
+    color: rgba(255,255,255,0.78);
+}
+
+.hero-open {
+    position: relative;
+    z-index: 5;
+}
+
+/* =========================================
+   DUGMAD
+========================================= */
+
+.btn-primary {
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.30),
+        0 0 60px rgba(139, 92, 246, 0.10);
+}
+
+.btn-primary:hover {
+    box-shadow:
+        0 0 35px rgba(167, 139, 250, 0.45),
+        0 0 80px rgba(139, 92, 246, 0.16);
+}
+
+/* =========================================
+   MOBILNI
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-character {
+        right: -100px;
+        opacity: 0.45;
+        transform: scale(0.85);
+        transform-origin: bottom right;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .hero-character {
+        right: -180px;
+        opacity: 0.22;
+        transform: scale(0.70);
+    }
+}
